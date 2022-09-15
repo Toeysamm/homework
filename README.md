@@ -403,13 +403,13 @@ acc_score(X_test,Y_test,mlp_model)
 class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
-<img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190417899-92277694-88b0-4f59-b813-f1757c498ccf.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190461096-4117bba8-0b26-4bbf-b3ab-55d1c40666e8.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190461239-bed46e28-4ebd-43b0-849b-217d0399a91b.png">
 
 Experiment with different initial random weights for 5 rounds  
 
 MLP | Initial random weight | Epoch | Time (mean) | Time (SD) | Accuracy
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------
-Round 1 | np.random.seed(1150)  tf.random.set_seed(1112) | 178 | 0.039 | 0.322 | 0.8051 
+Round 1 | np.random.seed(1150)  tf.random.set_seed(1112) | 173 | 0.039 | 0.322 | 0.8020 
 Round 2 | np.random.seed(1234)  tf.random.set_seed(5678) | 188 | 0.106 | 0.353 | 0.8049 
 Round 3 | np.random.seed(1928)  tf.random.set_seed(3746) | 78 | 0.210 | 0.495 | 0.7869 
 Round 4 | np.random.seed(4321)  tf.random.set_seed(8765) | 82 | 0.225 | 0.499 | 0.7991 
@@ -417,7 +417,7 @@ Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 |
 
 :bellhop_bell: | Time | Accuracy
 ------------ | ------------- | -------------
-MLP | 0.147±0.077 | 0.8009  
+MLP | 0.147±0.077 | 0.8003  
 Decision Tree | 0.02 | 0.8309
 Random Forest | 0.3 | 0.9004
 Gradient Boosting | 0.4 | 0.8472 
