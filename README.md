@@ -283,6 +283,7 @@ print(f"Y_test.shape={Y_test.shape}")
 ```
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/97492504/190440384-ad913f9d-397f-472e-ad29-d55f92a4d3fb.png">  
 Format the data for processing in MLP Model  
+
  - Change data type to folat32  
   
 ### **Prepare the environment**  
@@ -322,12 +323,28 @@ mlp_model.add(Dense(1, activation = 'sigmoid'))
 mlp_model.summary()
 ```
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190415003-76468d59-30dc-4fbb-ac0d-0cc97a77433a.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190415003-76468d59-30dc-4fbb-ac0d-0cc97a77433a.png">  
+We didn’t use Batch Normalization (BN) layer because when using it the output from dense layer will stay within a fixed range.  
 
+
+### **Compile the model**  
 ```
 mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc'])
 #model.compile( optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['acc'] )
 ```
+Optimizer : Adam  
+
+Use Adam as an Optimizer in this model   
+
+Cause adam has  qualities of Momentum and RMSprop that is based on adaptive estimation of first-order and second-order moments.  
+
+### **Loss function : binary_crossentropy**  
+
+Binary_crossentropy is the most suitable Loss function for doing binary classification model  
+
+## **As selecting the best number of epoch ,we need help.**
+Therefore we using earlystopping which stop at the best point and plus 20 epoch and ModelCheckpoint to find the maximum accuracy
+
 
 ```
 checkpoint_filepath = "bestmodel_epoch{epoch:02d}_valloss{val_loss:.2f}.hdf5"
