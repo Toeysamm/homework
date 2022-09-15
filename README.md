@@ -332,11 +332,11 @@ We didn’t use Batch Normalization (BN) layer because when using it the output 
 mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc'])
 #model.compile( optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['acc'] )
 ```
-**Optimizer : Adam**  
+ - **Optimizer : Adam**  
 Use Adam as an Optimizer in this model   
 Cause adam has  qualities of Momentum and RMSprop that is based on adaptive estimation of first-order and second-order moments.  
 
-**Loss function : binary_crossentropy**  
+ - **Loss function : binary_crossentropy**  
 Binary_crossentropy is the most suitable Loss function for doing binary classification model    
   
   
