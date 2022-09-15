@@ -84,6 +84,8 @@ df.drop('Geography', axis=1, inplace=True)
 y = df['Exited']
 df.drop(columns=['Exited'], axis=1, inplace=True)
 ```
+
 ```
 df
 ```
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190359905-9ffa8d58-52ed-4a58-b411-00b776ea3b52.png">
