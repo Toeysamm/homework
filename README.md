@@ -249,7 +249,7 @@ plot_cfm(X_test,Y_test,xgb_model)
 
 ## Multilayer perceptron : MLP
 
-**set seed**
+**set seed**  
 iteration 1
 ```
 np.random.seed(1150)
@@ -288,4 +288,4 @@ mlp_model.add(Dense(1, activation = 'sigmoid'))
 
 mlp_model.summary()
 ```
-<img width="310" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
