@@ -340,5 +340,5 @@ results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
 print( f"{mlp_model.metrics_names} = {results}" )
 ```
 
-`38/38 [==============================] - 0s 2ms/step - loss: 0.4305 - acc: 0.7943
+`38/38 [==============================] - 0s 2ms/step - loss: 0.4305 - acc: 0.7943  
 ['loss', 'acc'] = [0.43048879504203796, 0.7942653894424438]`
