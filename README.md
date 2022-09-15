@@ -6,18 +6,19 @@
 ## Introduction: 
 Binary classification
 
-## Data
-[Churn Modelling](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling):  The dataset contains 100,000 rows and 10 columns
-RowNumber 
-Customer id : Unique Ids for bank customer identification
-Surname : Customer's last name
-CreditScore :Credit score of the customer
-Geography : The country from which the customer belongs
-Gender : Male or Female
-Age : Age of the customer 
-Tenure: Number of years for which the customer has been with the bank
-Balance: Bank balance of the customer
-NumOfProducts :Number of bank products the customer is utilising
+# Data
+[Churn Modelling](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling):  
+The dataset contains 100,000 rows and 10 columns  
+ 1. RowNumber 
+ 2. Customer id: Unique Ids for bank customer identification
+ 3. Surname: Customer's last name
+ 4. CreditScore: Credit score of the customer
+ 5. Geography: The country from which the customer belongs
+ 6. Gender: Male or Female
+ 7. Age: Age of the customer 
+ 8. Tenure: Number of years for which the customer has been with the bank
+ 9. Balance: Bank balance of the customer
+ 10. NumOfProducts: Number of bank products the customer is utilising
 
 ```
 url = "https://drive.google.com/file/d/1-mT6iykRVgRU3blYpX5i_YxhbqjUJepP/view?usp=sharing"
