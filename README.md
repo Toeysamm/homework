@@ -222,3 +222,14 @@ plot_cfm(X_test,Y_test,RF)
 ```
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190377521-2575e1bf-4e0b-4386-b09d-7c42891a6d9c.png">     <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190376822-9aefe40e-ea3c-440c-ad48-d2eea11bcd72.png">     <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190376957-1a3f7056-36de-499f-a793-04ce484208e2.png">
 
+**Gradient Boosting in ML**
+```
+from sklearn.ensemble import GradientBoostingClassifier
+GB = GradientBoostingClassifier()
+GB.fit(X_train, Y_train)
+acc_score(X_test,Y_test,GB)
+class_report (X_test,Y_test,GB)
+plot_crv(X_test,Y_test,GB)
+plot_cfm(X_test,Y_test,GB)
+```
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190379243-7b22dddc-d32b-4c8b-897e-f0de517f05d3.png">      <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190379348-503d3b48-8fb4-42bc-99e5-6e1ea6c8714b.png">     <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190379420-827486b6-aead-45f5-a5a0-cf21ec7ffc3a.png">
