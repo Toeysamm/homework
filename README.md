@@ -250,12 +250,10 @@ plot_cfm(X_test,Y_test,xgb_model)
 ## Multilayer perceptron : MLP
 
 **set seed**  
-`iteration 1`
 ```
 np.random.seed(1150)
 tf.random.set_seed(1112)
 ```
-**coding for MLP**
 
 ```
 X_train.shape
@@ -348,14 +346,3 @@ plot_cfm(X_test,Y_test,mlp_model)
 ```
 
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190389992-bdc5addd-6bbf-4049-a7aa-51fade2c5667.png">      <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190390049-91f2d21d-330a-44b5-acb3-79de2e667654.png">
-
-`iteration 2`
-```
-np.random.seed(1234)
-tf.random.set_seed(5678)
-```
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190392279-8009fddb-b544-470f-be3b-fe0196b8bdc6.png">
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190392401-8cf15b86-00f7-4ddf-98d6-6eb8e576302e.png">
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190392558-64ec1518-05c8-43a0-b8ca-7786deecc1ec.png">
-
-<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190392830-912fce20-5b1d-4d05-a1f1-1ae5f90b1d9f.png"><img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190392917-2d8c9509-bf66-4751-93e7-365d313e128c.png">
