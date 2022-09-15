@@ -6,9 +6,9 @@
 ## Introduction: 
 Binary classification
 
-# Data
+## Data
 [Churn Modelling](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling):  
-The dataset contains 100,000 rows and 10 columns  
+The dataset contains 100,000 rows and 10 columns
  1. RowNumber 
  2. Customer id: Unique Ids for bank customer identification
  3. Surname: Customer's last name
