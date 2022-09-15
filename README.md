@@ -133,6 +133,10 @@ df
 ```
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361206-a28fbb68-7b2d-426b-8e7e-929949b1c7ab.png">
 
+From
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190437992-ba449b0f-9f03-4627-bbb1-c61d964878c9.png">  
+As we see in the data visualisation , in column ‘Exited ‘ which is imbalance data so we use over_sampling to adjust it into balance data.
+
 ```
 from imblearn.over_sampling import SMOTE
 smote=SMOTE(sampling_strategy='auto',k_neighbors=1,random_state=1234)
