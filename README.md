@@ -414,3 +414,17 @@ Round 2 | np.random.seed(1234)  tf.random.set_seed(5678) | 188 | 0.106 | 0.353 |
 Round 3 | np.random.seed(1928)  tf.random.set_seed(3746) | 78 | 0.210 | 0.495 | 0.7869 
 Round 4 | np.random.seed(4321)  tf.random.set_seed(8765) | 82 | 0.225 | 0.499 | 0.7991 
 Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 | 0.8083 
+
+
+## Member:  
+6410412002  Mr. Kittipat Pattarajariya  
+6410412004  Miss Chonthanya Yosbuth  
+6410412010  Mr. Saran Ditjarern  
+6410412018  Miss Panumas sitthikarn  
+
+
+## Reference:  
+Brownlee, J. (2020).   Random Oversampling and Undersampling for Imbalanced Classification. Retrieved from https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/  
+Rahul, A. (2019). The 5 Sampling Algorithms every Data Scientist need to know. Retrieved from https://towardsdatascience.com/the-5-sampling-algorithms-every-data-scientist-need-to-know-43c7bc11d17c  
+Ekarat, R. (2020). DADS6003 In-class competition Applied ML competition. Retrieved from https://www.kaggle.com/competitions/dads6003-in-class-competition/rules  
+Shruti, I. (2019). Churn Modelling classification data set. Retrieved from https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling  
