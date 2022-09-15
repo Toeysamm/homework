@@ -10,6 +10,8 @@ url = "https://drive.google.com/file/d/1-mT6iykRVgRU3blYpX5i_YxhbqjUJepP/view?us
 path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
 df = pd.read_csv(path)
 ```
+**data visualization**
+
 ```
 df.head()
 ```
