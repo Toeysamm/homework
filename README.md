@@ -406,11 +406,11 @@ plot_cfm(X_test,Y_test,mlp_model)
 <img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190417899-92277694-88b0-4f59-b813-f1757c498ccf.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
 
 Experiment with different initial random weights for 5 rounds  
-![image](https://user-images.githubusercontent.com/97492504/190451501-93e70c85-cbda-48d3-888c-a847f91036ca.png)
-
 
 MLP | Initial random weight | Epoch | Time (mean) | Time (SD) | Time (SD) | Accuracy
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
 Round 1 | np.random.seed(1150)  tf.random.set_seed(1112) | 178 | 0.039 | 0.322 | 0.8051
 Round 2 | np.random.seed(1234)  tf.random.set_seed(5678) | 188 | 0.106 | 0.353 | 0.8049
 Round 3 | np.random.seed(1928)  tf.random.set_seed(3746) | 78 | 0.210 | 0.495 | 0.7869
+Round 4 | np.random.seed(4321)  tf.random.set_seed(8765) | 82 | 0.225 | 0.499 | 0.7991
+Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 | 0.8083
