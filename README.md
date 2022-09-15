@@ -46,8 +46,13 @@ sns.histplot(df['Age'],color="green",fill=False)
 plt.figure(figsize=(12, 9))
 sns.histplot(df['Balance'],color="orange",fill=False)
 ```
-<img width="437" alt="image" src="https://user-images.githubusercontent.com/97492504/190358043-a63e29fc-db3f-41d7-89fe-f527d345b27c.png">
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358043-a63e29fc-db3f-41d7-89fe-f527d345b27c.png">
 
+```
+plt.figure(figsize=(12, 9))
+sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
+```
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
 ## EDA
 
