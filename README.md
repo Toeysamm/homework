@@ -131,6 +131,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X_data , Y_data , test_size = 0.3, random_state = 0)
 ```
 
+**Data formatting**
 ```
 X_train = X_train.astype(np.float32)
 X_test = X_test.astype(np.float32)
@@ -233,3 +234,58 @@ plot_crv(X_test,Y_test,GB)
 plot_cfm(X_test,Y_test,GB)
 ```
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190379243-7b22dddc-d32b-4c8b-897e-f0de517f05d3.png">      <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190379348-503d3b48-8fb4-42bc-99e5-6e1ea6c8714b.png">     <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190379420-827486b6-aead-45f5-a5a0-cf21ec7ffc3a.png">
+
+**XGBoost in ML**
+```
+from xgboost import XGBClassifier
+xgb_model = XGBClassifier(learning_rate = 0.1, n_estimators = 180, max_depth = 3)
+xgb_model.fit(X_train, Y_train)
+acc_score(X_test,Y_test,xgb_model)
+class_report (X_test,Y_test,xgb_model)
+plot_crv(X_test,Y_test,xgb_model)
+plot_cfm(X_test,Y_test,xgb_model)
+```
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190380227-f0823411-65ea-4aee-8979-85dd3e730185.png">     <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190380314-5a6bcd1a-cae1-4152-b216-49547c6d4053.png">      <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190380436-ea1f2a2f-39b0-4287-a228-37b861c36015.png">
+
+## Multilayer perceptron : MLP
+
+**set seed**
+iteration 1
+```
+np.random.seed(1150)
+tf.random.set_seed(1112)
+```
+```
+X_train.shape
+```
+```
+Y_train.shape
+```
+```
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
+```
+```
+mlp_model = tf.keras.models.Sequential()
+
+# Input layer
+mlp_model.add( tf.keras.Input(shape=(12,)) )
+
+# Hidden layer
+mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden1') )  
+mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn1') )  
+mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden2') )   
+mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn2') )
+mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden3') )   
+mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn3') )
+mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden4') )   
+mlp_model.add( tf.keras.layers.Dropout(0.3) )                     
+
+# Output layer
+mlp_model.add(Dense(1, activation = 'sigmoid'))
+
+
+mlp_model.summary()
+```
+<img width="310" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
