@@ -57,4 +57,7 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
 ## EDA
-
+**Data preparation and Data pre-processing**: Data Cleaning and normalization.
+```
+df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
+```
