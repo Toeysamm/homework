@@ -42,19 +42,19 @@ sns.countplot(df['NumOfProducts'], ax=ax[1,2])
 plt.figure(figsize=(12, 9))
 sns.histplot(df['Age'],color="green",fill=False)
 ```
-<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190357858-5b59a9a3-79ac-4f28-8a92-a185fe62a885.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190357858-5b59a9a3-79ac-4f28-8a92-a185fe62a885.png">
 
 ```
 plt.figure(figsize=(12, 9))
 sns.histplot(df['Balance'],color="orange",fill=False)
 ```
-<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358043-a63e29fc-db3f-41d7-89fe-f527d345b27c.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190358043-a63e29fc-db3f-41d7-89fe-f527d345b27c.png">
 
 ```
 plt.figure(figsize=(12, 9))
 sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 ```
-<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
 ## Exploratory Data Analysis : EDA
 **Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.
@@ -220,4 +220,4 @@ class_report (X_test,Y_test,DT)
 plot_crv(X_test,Y_test,DT)
 plot_cfm(X_test,Y_test,DT)
 ```
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png"><img width="280" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png"><img width="227" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png"><img width="260" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png"><img width="227" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
