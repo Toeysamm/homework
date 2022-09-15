@@ -281,13 +281,20 @@ print(f"Y_train.shape={Y_train.shape}")
 print(f"X_test.shape={X_test.shape}")
 print(f"Y_test.shape={Y_test.shape}")
 ```
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/97492504/190440384-ad913f9d-397f-472e-ad29-d55f92a4d3fb.png">
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/97492504/190440384-ad913f9d-397f-472e-ad29-d55f92a4d3fb.png">  
+Format the data for processing in MLP Model
+ - Change data type to folat32
 
-**set seed**
+**Prepare the environment**  
+GPU 0: Tesla T4 (UUID: GPU-6920f9b5-6b3f-b622-1489-c27afa2cf745)  
+
+**Initial random weights**
 ```
 np.random.seed(1150)
 tf.random.set_seed(1112)
 ```
+
+**Create Network architecture**
 
 ```
 import tensorflow as tf
