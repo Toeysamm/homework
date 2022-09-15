@@ -338,7 +338,9 @@ Cause adam has  qualities of Momentum and RMSprop that is based on adaptive esti
 
 **Loss function : binary_crossentropy**  
 Binary_crossentropy is the most suitable Loss function for doing binary classification model  
-
+  
+  
+  
 #### **As selecting the best number of epoch, we need help.**  
 Therefore we using earlystopping which stop at the best point and plus 20 epoch and ModelCheckpoint to find the maximum accuracy
 
