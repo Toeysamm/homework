@@ -220,7 +220,7 @@ class_report (X_test,Y_test,DT)
 plot_crv(X_test,Y_test,DT)
 plot_cfm(X_test,Y_test,DT)
 ```
-<img width="360" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png">    <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png">    <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/97492504/190369176-ffef6573-587b-4e0d-ad35-661fa44ea05e.png">    <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png">    <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
 
 **Random Forest in ML**
 ```
