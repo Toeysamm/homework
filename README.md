@@ -333,7 +333,7 @@ plt.grid()
 plt.show()
 ```
 
-<img width="900" alt="image" src="https://user-images.githubusercontent.com/97492504/190389375-ccad43c1-e5a6-44d3-9823-2834f4c88241.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190389375-ccad43c1-e5a6-44d3-9823-2834f4c88241.png">
 
 ```
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
