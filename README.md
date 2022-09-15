@@ -339,6 +339,12 @@ plt.show()
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
 print( f"{mlp_model.metrics_names} = {results}" )
 ```
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190389812-09932581-f744-4855-96f3-65bfcf52a5d8.png">
 
-`38/38 [==============================] - 0s 2ms/step - loss: 0.4305 - acc: 0.7943  
-['loss', 'acc'] = [0.43048879504203796, 0.7942653894424438]`
+```
+acc_score(X_test,Y_test,mlp_model)
+class_report (X_test,Y_test,mlp_model)
+plot_cfm(X_test,Y_test,mlp_model)
+```
+
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190389992-bdc5addd-6bbf-4049-a7aa-51fade2c5667.png">      <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190390049-91f2d21d-330a-44b5-acb3-79de2e667654.png">
