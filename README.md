@@ -289,7 +289,7 @@ mlp_model.add(Dense(1, activation = 'sigmoid'))
 mlp_model.summary()
 ```
 
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190415003-76468d59-30dc-4fbb-ac0d-0cc97a77433a.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190415003-76468d59-30dc-4fbb-ac0d-0cc97a77433a.png">
 
 ```
 mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc'])
@@ -338,7 +338,7 @@ plt.grid()
 plt.show()
 ```
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
 
 ```
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
