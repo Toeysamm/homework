@@ -114,6 +114,7 @@ df
 ```
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190359905-9ffa8d58-52ed-4a58-b411-00b776ea3b52.png">
 
+Use MinMaxScaler to scaling the data.
 ```
 from sklearn import preprocessing
 from sklearn.preprocessing import MinMaxScaler
