@@ -303,9 +303,9 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpo
                                                                                               save_best_only=True)
 ```
 ```
-history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=25, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback] )
+history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=250, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback] )
 ```
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190388476-c094e005-4431-4c83-8fe1-7176de10da1b.png">
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190398798-8eb6befb-9182-40b3-8315-61900bdeb390.png">
 
 ```
 # Summarize history for accuracy
