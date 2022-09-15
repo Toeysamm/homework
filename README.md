@@ -415,6 +415,15 @@ Round 3 | np.random.seed(1928)  tf.random.set_seed(3746) | 78 | 0.210 | 0.495 | 
 Round 4 | np.random.seed(4321)  tf.random.set_seed(8765) | 82 | 0.225 | 0.499 | 0.7991 
 Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 | 0.8083 
 
+:bellhop_bell: | Time | Accuracy
+------------ | ------------- | -------------
+MLP | 0.147±0.077 | 0.8009  
+Decision Tree | 0.02 | 0.8309
+Random Forest | 0.3 | 0.9004
+Gradient Boosting | 0.4 | 0.8472 
+XGBoost | 0.3 | 0.8753
+
+
 
 ## Member:  
 6410412002  Mr. Kittipat Pattarajariya  
