@@ -167,19 +167,6 @@ def class_report (X_test,Y_test,model):
   Y_predict = predict_y(X_test,model)
   #print(classification_report(Y_test,Y_predict))
 
-  #code for indent report problem below
-  rp=classification_report(Y_test,Y_predict,output_dict=True)
-  rpd=pd.DataFrame(rp).transpose()
-  rpd.rename(index={'0.0':'retrained','1.0':'closed'},inplace=True)
-  #rpd.drop(index='accuracy',inplace=True)
-  rpd = rpd.astype({'support':'int'})
-  pd.set_option('display.float_format', '{:.4f}'.format)
-  print(f'\nClassification Report\n')
-  mx=rpd['support'].max()
-  rpd['support'].replace(0,mx,inplace=True)
-  display(rpd)
-
-
 def plot_crv(X_test,Y_test,model):
   Prob_Y_predict = model.predict_proba(X_test)[::,1]
   print(f"\nAUC_ROC = {roc_auc_score(Y_test,Prob_Y_predict)*100:.2f}%\n")
@@ -220,7 +207,7 @@ class_report (X_test,Y_test,DT)
 plot_crv(X_test,Y_test,DT)
 plot_cfm(X_test,Y_test,DT)
 ```
-<img width="360" alt="image" src="https://user-images.githubusercontent.com/97492504/190369176-ffef6573-587b-4e0d-ad35-661fa44ea05e.png">    <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png">    <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190369176-ffef6573-587b-4e0d-ad35-661fa44ea05e.png">    <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png">    <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
 
 **Random Forest in ML**
 ```
