@@ -134,7 +134,7 @@ df
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361206-a28fbb68-7b2d-426b-8e7e-929949b1c7ab.png">
 
 From data visualisation above.
-<center><img width="200" alt="image" src="https://user-images.githubusercontent.com/97492504/190437992-ba449b0f-9f03-4627-bbb1-c61d964878c9.png"></center>  
+<center><img width="250" alt="image" src="https://user-images.githubusercontent.com/97492504/190437992-ba449b0f-9f03-4627-bbb1-c61d964878c9.png"></center>  
 As we see in the data visualisation , in column ‘Exited ‘ which is imbalance data so we use resampling to adjust it into balance data.
 
 ```
@@ -158,14 +158,6 @@ sns.countplot(Y_data)
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X_data , Y_data , test_size = 0.3, random_state = 0)
-```
-
-**Data formatting**
-```
-X_train = X_train.astype(np.float32)
-X_test = X_test.astype(np.float32)
-Y_train = Y_train.astype(np.float32)
-Y_test = Y_test.astype(np.float32)
 ```
 
 ```
@@ -278,18 +270,23 @@ plot_cfm(X_test,Y_test,xgb_model)
 
 ## Multilayer perceptron : MLP
 
+**Data formatting**
+```
+X_train = X_train.astype(np.float32)
+X_test = X_test.astype(np.float32)
+Y_train = Y_train.astype(np.float32)
+Y_test = Y_test.astype(np.float32)
+print(f"X_train.shape={X_train.shape}")
+print(f"Y_train.shape={Y_train.shape}")
+print(f"X_test.shape={X_test.shape}")
+print(f"Y_test.shape={Y_test.shape}")
+```
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/97492504/190440384-ad913f9d-397f-472e-ad29-d55f92a4d3fb.png">
+
 **set seed**
 ```
 np.random.seed(1150)
 tf.random.set_seed(1112)
-```
-
-```
-X_train.shape
-```
-
-```
-Y_train.shape
 ```
 
 ```
