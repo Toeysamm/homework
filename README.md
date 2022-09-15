@@ -407,3 +407,9 @@ plot_cfm(X_test,Y_test,mlp_model)
 
 Experiment with different initial random weights for 5 rounds  
 ![image](https://user-images.githubusercontent.com/97492504/190451501-93e70c85-cbda-48d3-888c-a847f91036ca.png)
+
+
+MLP | Initial random weight | Epoch | Time (mean) | Time (SD) | Time (SD) | Accuracy
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
+แถวแรก คอลั่มแรก | แถวแรก คอลั่มที่ 2 | แถวแรก คอลั่มที่ 2
+แถวที่ 2 คอลั่มแรก | แถวที่ 2 คอลั่มที่ 2 | แถวแรก คอลั่มที่ 2
