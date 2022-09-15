@@ -88,4 +88,22 @@ df.drop(columns=['Exited'], axis=1, inplace=True)
 ```
 df
 ```
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190359905-9ffa8d58-52ed-4a58-b411-00b776ea3b52.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190359905-9ffa8d58-52ed-4a58-b411-00b776ea3b52.png">
+
+```
+from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler
+scalar = preprocessing.MinMaxScaler()
+col=df.columns
+df=scalar.fit_transform(df)
+df=pd.DataFrame(df,columns=col)
+```
+
+```
+df=pd.DataFrame(df,columns=col)
+```
+
+```
+df
+```
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361206-a28fbb68-7b2d-426b-8e7e-929949b1c7ab.png">
