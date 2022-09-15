@@ -118,3 +118,8 @@ X_data, Y_data = smote.fit_resample(df,y)
 X_data
 ```
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361752-aeed69ad-b52e-491b-8b8f-1da742c0c543.png">
+
+```
+sns.countplot(Y_data)
+```
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190362007-c3d4b156-cc6b-45f6-a391-cd983ba7ead8.png">
