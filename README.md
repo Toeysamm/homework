@@ -385,6 +385,11 @@ plt.grid()
 plt.show()
 ```
 
+After we ran the MLP model several times with difference hyperparameters, finally we found the satisfactory model by using following these hyperparameters.  
+ - Epochs = 300 
+ - Batch size = 128
+ - validation_split = 0.2  
+
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
 
 ```
@@ -399,3 +404,6 @@ class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
 <img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190417899-92277694-88b0-4f59-b813-f1757c498ccf.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
+
+Experiment with different initial random weights for 5 rounds  
+![image](https://user-images.githubusercontent.com/97492504/190451501-93e70c85-cbda-48d3-888c-a847f91036ca.png)
