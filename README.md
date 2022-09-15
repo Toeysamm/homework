@@ -419,11 +419,11 @@ Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 |
 
 ## Discussion :
  1. Assumptions, this project is a comparison of the model between Traditional ML Model and MLP Model. This project is a Churn model by Binary Classification. Therefore, we considers that using MLP Model will be a better model than ML Model, the accuracy score will be more and the running time should be more because the model is larger and more complex than ML Model. But after running these model, we found that accuracy score of the traditional ML better than MLP, while using more time than others except Decision Tree.  
- 2. Imbalance Data: we use resampling helps to balance the data. After resampling and running the model, it will increase the accuracy of ML Model but slightly decrease in MLP Model.
+ 2. Imbalance Data: we use resampling helps to balance the data. After resampling and running the model, it will increase the accuracy of ML Model but slightly decrease in MLP Model.  
 
 
-
-
+## Conclusion: 
+Based on the traditional ML, we selected four algorithms namely Decision Tree, Random Forest, Gradient Boosting and XGBoost, by estimating the model from Accuracy and running time to compare with MLP as shown in the table.  
 
 :bellhop_bell: | Time | Accuracy
 ------------ | ------------- | -------------
@@ -433,7 +433,7 @@ Random Forest | 0.3 | 0.9004
 Gradient Boosting | 0.4 | 0.8472 
 XGBoost | 0.3 | 0.8753
 
-
+The results obtained from the Accuracy of both Traditional ML and MLP differ slightly. Overall, Traditional ML has a higher Accuracy, possibly due to less complex or low-volume data, but MLP run times are relatively faster than Traditional ML (Decision Tree< MLP < Gradient Boosting<Random Forest= . XGBoost)  
 
 ## Member:  
 6410412002  Mr. Kittipat Pattarajariya  
