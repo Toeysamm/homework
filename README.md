@@ -34,7 +34,7 @@ sns.countplot(df['IsActiveMember'], ax=ax[1,1])
 ax[1,1].set_xticklabels(["No", "Yes"])
 sns.countplot(df['NumOfProducts'], ax=ax[1,2])
 ```
-<img width="511" alt="image" src="https://user-images.githubusercontent.com/97492504/190357564-9eb10355-1a0b-4d54-a26b-b53a5d9bc85e.png">
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190357564-9eb10355-1a0b-4d54-a26b-b53a5d9bc85e.png">
 
 
 ## EDA
