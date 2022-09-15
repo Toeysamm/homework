@@ -91,6 +91,7 @@ df['Gender'].replace(['Female'],0 , inplace=True)
 ```
 df['Gender'].replace(['Male'],1 , inplace=True)
 ```
+`Select some columns and drop useless columns from the dataframe, then we change parameters in Gender column to dummy variables.`
 
 ```
 df['Gender'].unique()
