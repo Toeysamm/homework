@@ -56,7 +56,7 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 ```
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis : EDA
 **Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.
 ```
 df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
@@ -124,7 +124,7 @@ sns.countplot(Y_data)
 ```
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190362007-c3d4b156-cc6b-45f6-a391-cd983ba7ead8.png">
 
-## Machine Learning Model
+## Machine Learning Model : ML
 
 ```
 from sklearn.model_selection import train_test_split
@@ -210,7 +210,7 @@ def plot_cfm(X_test,Y_test,model):
   plt.show()
 ```
 
-**Decision Tree**
+**Decision Tree in ML**
 ```
 from sklearn.tree import DecisionTreeClassifier
 DT = DecisionTreeClassifier()
@@ -220,4 +220,4 @@ class_report (X_test,Y_test,DT)
 plot_crv(X_test,Y_test,DT)
 plot_cfm(X_test,Y_test,DT)
 ```
-<img width="224" alt="image" src="https://user-images.githubusercontent.com/97492504/190364557-1e265c74-81f5-4892-8988-cc801a8d481d.png">
+<img width="236" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png"><img width="239" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png"><img width="227" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
