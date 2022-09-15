@@ -1,7 +1,4 @@
-# DADS7202 - HW1
-
-## Highlight
-สรุปไฮไลท์ที่น่าสนใจของการบ้านชิ้นนี้ โดยเขียนเป็น bullet สั้น ๆ กระชับแต่ได้ใจความ จํานวนประมาณ 3-5 bullets ทั้งนี้ให้ใส่ส่วนนี้ไว้ที่ด้านบนสุดของหน้าเพจ (หลังจาก topic) โดยควรจะเป็นข้อคิดเห็น การค้นพบ ข้อสรุปหรือข้อมูล insight น่าสนใจที่ทางกลุ่มค้นพบจากการทําการบ้านครั้งนี้
+# DADS7202 - HW1  
 
 ## Introduction: 
 Customer churn is a major problem and one of the most important concerns for large companies. Due to the direct effect on the revenues of the companies, especially in the Bank. Therefore this project doing churn prediction by using  data set which  includes details of a bank's customers and the target variable is a binary variable reflecting the fact whether the customer left the bank (closed his account) or  continues to be a customer.  
@@ -436,7 +433,7 @@ Random Forest | 0.3 | 0.9004
 Gradient Boosting | 0.4 | 0.8472 
 XGBoost | 0.3 | 0.8753
 
-The results obtained from the Accuracy of both Traditional ML and MLP differ slightly. Overall, Traditional ML has a higher Accuracy, possibly due to less complex or low-volume data, but MLP run times are relatively faster than Traditional ML (Decision Tree< MLP < Gradient Boosting<Random Forest= . XGBoost)  
+The results obtained from the Accuracy of both traditional ML and MLP differ slightly. Overall, Traditional ML has a higher Accuracy, possibly due to less complex or low-volume data, but MLP run times are relatively faster than Traditional ML. 
 
 ## Member:  
 6410412002  Mr. Kittipat Pattarajariya  
