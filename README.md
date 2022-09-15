@@ -20,5 +20,22 @@ df.describe()
 ```
 <img width="940" alt="image" src="https://user-images.githubusercontent.com/97492504/190357180-78e37f5d-38b7-4807-b2d8-191c8540b980.png">
 
+
+```
+fig, ax = plt.subplots(2,3,figsize=(12,10))
+fig.tight_layout(pad=2, w_pad=5 , h_pad=2)
+sns.countplot(df['Exited'], ax=ax[0,0])
+ax[0,0].set_xticklabels(["Retained", "Closed"])
+sns.countplot(df['Gender'], ax=ax[0,1])
+sns.countplot(df['Geography'], ax=ax[0,2])
+sns.countplot(df['HasCrCard'], ax=ax[1,0])
+ax[1,0].set_xticklabels(["No", "Yes"])
+sns.countplot(df['IsActiveMember'], ax=ax[1,1])
+ax[1,1].set_xticklabels(["No", "Yes"])
+sns.countplot(df['NumOfProducts'], ax=ax[1,2])
+```
+<img width="511" alt="image" src="https://user-images.githubusercontent.com/97492504/190357564-9eb10355-1a0b-4d54-a26b-b53a5d9bc85e.png">
+
+
 ## EDA
 
