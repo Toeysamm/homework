@@ -57,7 +57,7 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
 ## EDA
-**Data preparation and Data pre-processing**: Data Cleaning and normalization.
+**Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.
 ```
 df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
 ```
@@ -107,3 +107,14 @@ df=pd.DataFrame(df,columns=col)
 df
 ```
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361206-a28fbb68-7b2d-426b-8e7e-929949b1c7ab.png">
+
+```
+from imblearn.over_sampling import SMOTE
+smote=SMOTE(sampling_strategy='auto',k_neighbors=1,random_state=1234)
+X_data, Y_data = smote.fit_resample(df,y)
+```
+
+```
+X_data
+```
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190361752-aeed69ad-b52e-491b-8b8f-1da742c0c543.png">
