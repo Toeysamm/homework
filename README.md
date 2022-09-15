@@ -8,7 +8,7 @@ For  this project will do  binary classification by using Traditional ML and MLP
 
 ## Data
 [Churn Modelling](https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling):  
-The dataset contains 10,000 rows and 10 columns  
+The dataset contains 10,000 rows and 14 columns  
  1. RowNumber: Row Numbers from 1 to 10000
  2. CustomerId: Unique Ids for bank customer identification
  3. Surname: Customer's last name
@@ -333,16 +333,16 @@ mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc']
 #model.compile( optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['acc'] )
 ```
  - **Optimizer : Adam**  
-Use Adam as an Optimizer in this model   
+Use Adam as an Optimizer in this model.   
 Cause adam has  qualities of Momentum and RMSprop that is based on adaptive estimation of first-order and second-order moments.  
 
  - **Loss function : binary_crossentropy**  
-Binary_crossentropy is the most suitable Loss function for doing binary classification model    
+Binary_crossentropy is the most suitable Loss function for doing binary classification model.    
   
   
   
 #### **As selecting the best number of epoch, we need help.**  
-Therefore we using earlystopping which stop at the best point and plus 20 epoch and ModelCheckpoint to find the maximum accuracy
+Therefore we using earlystopping which stop at the best point and plus 20 epoch and ModelCheckpoint to find the maximum accuracy.
 ```
 checkpoint_filepath = "bestmodel_epoch{epoch:02d}_valloss{val_loss:.2f}.hdf5"
 model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpoint_filepath,
@@ -403,9 +403,10 @@ acc_score(X_test,Y_test,mlp_model)
 class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
-<img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190461096-4117bba8-0b26-4bbf-b3ab-55d1c40666e8.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190461239-bed46e28-4ebd-43b0-849b-217d0399a91b.png">
+<img width="380" alt="image" src="https://user-images.githubusercontent.com/97492504/190461096-4117bba8-0b26-4bbf-b3ab-55d1c40666e8.png"><img width="320" alt="image" src="https://user-images.githubusercontent.com/97492504/190461239-bed46e28-4ebd-43b0-849b-217d0399a91b.png">    
 
 Experiment with different initial random weights for 5 rounds  
+Remark: Epoch numbers besd on Earlystopping  
 
 MLP | Initial random weight | Epoch | Time (mean) | Time (SD) | Accuracy
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------
@@ -427,7 +428,7 @@ Based on the traditional ML, we selected four algorithms namely Decision Tree, R
 
 :bellhop_bell: | Time | Accuracy
 ------------ | ------------- | -------------
-MLP | 0.147±0.077 | 0.8003  
+MLP | 0.147±0.077 | 0.8003±0.0082
 Decision Tree | 0.02 | 0.8309
 Random Forest | 0.3 | 0.9004
 Gradient Boosting | 0.4 | 0.8472 
