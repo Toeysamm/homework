@@ -351,4 +351,4 @@ acc_score(X_test,Y_test,mlp_model)
 class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
-<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190417899-92277694-88b0-4f59-b813-f1757c498ccf.png"><img width="330" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/97492504/190417899-92277694-88b0-4f59-b813-f1757c498ccf.png"><img width="330" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
