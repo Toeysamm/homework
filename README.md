@@ -36,6 +36,11 @@ sns.countplot(df['NumOfProducts'], ax=ax[1,2])
 ```
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190357564-9eb10355-1a0b-4d54-a26b-b53a5d9bc85e.png">
 
+```
+plt.figure(figsize=(12, 9))
+sns.histplot(df['Age'],color="green",fill=False)
+```
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190357858-5b59a9a3-79ac-4f28-8a92-a185fe62a885.png">
 
 ## EDA
 
