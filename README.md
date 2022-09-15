@@ -220,4 +220,4 @@ class_report (X_test,Y_test,DT)
 plot_crv(X_test,Y_test,DT)
 plot_cfm(X_test,Y_test,DT)
 ```
-<img width="236" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png"><img width="239" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png"><img width="227" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190364988-6bcac20b-ea8f-42bc-b6a4-6d90a9d3075a.png"><img width="280" alt="image" src="https://user-images.githubusercontent.com/97492504/190365062-c7e3f941-9d6a-449e-b6f0-4ea3b35d7945.png"><img width="227" alt="image" src="https://user-images.githubusercontent.com/97492504/190365126-3e6c6760-099b-4c9d-8bf9-eb509223925f.png">
