@@ -56,7 +56,7 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 ```
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
-## EDA
+## Exploratory Data Analysis
 **Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.
 ```
 df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
@@ -123,3 +123,89 @@ X_data
 sns.countplot(Y_data)
 ```
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190362007-c3d4b156-cc6b-45f6-a391-cd983ba7ead8.png">
+
+## Machine Learning Model
+
+```
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(X_data , Y_data , test_size = 0.3, random_state = 0)
+```
+
+```
+X_train = X_train.astype(np.float32)
+X_test = X_test.astype(np.float32)
+Y_train = Y_train.astype(np.float32)
+Y_test = Y_test.astype(np.float32)
+```
+
+```
+from sklearn import metrics
+from sklearn.metrics import classification_report , accuracy_score , roc_curve , roc_auc_score , confusion_matrix
+```
+
+```
+def predict_y(X_test,model):
+  if str(type(model)) == "<class 'keras.engine.sequential.Sequential'>":
+    Y_predict = model.predict(X_test)
+    for i in range(0, len(Y_predict)):
+      if Y_predict[i] > 0.5:
+        Y_predict[i] = 1
+      else:
+        Y_predict[i] = 0
+  else:
+    Y_predict=model.predict(X_test)
+  return Y_predict
+ ```
+ 
+ ```
+ def acc_score(X_test,Y_test,model):
+  Y_predict = predict_y(X_test,model)
+  acc = accuracy_score(Y_test, Y_predict)
+  print(f"Accuracy = {acc*100:.2f}%")
+
+def class_report (X_test,Y_test,model):
+  Y_predict = predict_y(X_test,model)
+  #print(classification_report(Y_test,Y_predict))
+
+  #code for indent report problem below
+  rp=classification_report(Y_test,Y_predict,output_dict=True)
+  rpd=pd.DataFrame(rp).transpose()
+  rpd.rename(index={'0.0':'retrained','1.0':'closed'},inplace=True)
+  #rpd.drop(index='accuracy',inplace=True)
+  rpd = rpd.astype({'support':'int'})
+  pd.set_option('display.float_format', '{:.4f}'.format)
+  print(f'\nClassification Report\n')
+  mx=rpd['support'].max()
+  rpd['support'].replace(0,mx,inplace=True)
+  display(rpd)
+
+
+def plot_crv(X_test,Y_test,model):
+  Prob_Y_predict = model.predict_proba(X_test)[::,1]
+  print(f"\nAUC_ROC = {roc_auc_score(Y_test,Prob_Y_predict)*100:.2f}%\n")
+  fpr, tpr, _ = metrics.roc_curve(Y_test,  Prob_Y_predict)
+  plt.plot(fpr,tpr)
+  plt.plot([0,1], [0,1], 'red')
+  plt.ylabel('True Positive Rate')
+  plt.xlabel('False Positive Rate')
+  plt.show()
+
+def plot_cfm(X_test,Y_test,model):
+  if str(type(model)) == "<class 'keras.engine.sequential.Sequential'>":
+    shd='Purples'
+  else:
+    shd='YlGnBu'
+  Y_predict = predict_y(X_test,model)
+  cf_matrix = confusion_matrix(Y_test, Y_predict)
+  print("\nConfusion Matrix")
+  print(cf_matrix)
+  ax = sns.heatmap(cf_matrix, annot=True, cmap=shd,fmt='g')
+
+  ax.set_title('Confusion Matrix Heatmap');
+  ax.set_xlabel('Predicted Values')
+  ax.set_ylabel('Actual Values ');
+
+  ax.xaxis.set_ticklabels(['Retrained','Closed'])
+  ax.yaxis.set_ticklabels(['Retrained','Closed'])
+  plt.show()
+ ```
