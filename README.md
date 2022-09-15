@@ -255,6 +255,8 @@ plot_cfm(X_test,Y_test,xgb_model)
 np.random.seed(1150)
 tf.random.set_seed(1112)
 ```
+**coding for MLP**
+
 ```
 X_train.shape
 ```
@@ -306,3 +308,37 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpo
 history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=25, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback] )
 ```
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190388476-c094e005-4431-4c83-8fe1-7176de10da1b.png">
+
+```
+# Summarize history for accuracy
+plt.figure(figsize=(15,5))
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('Train accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.grid()
+plt.show()
+
+# Summarize history for loss
+plt.figure(figsize=(15,5))
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Train loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper right')
+plt.grid()
+plt.show()
+```
+
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97492504/190389375-ccad43c1-e5a6-44d3-9823-2834f4c88241.png">
+
+```
+results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
+print( f"{mlp_model.metrics_names} = {results}" )
+```
+
+`38/38 [==============================] - 0s 2ms/step - loss: 0.4305 - acc: 0.7943
+['loss', 'acc'] = [0.43048879504203796, 0.7942653894424438]`
