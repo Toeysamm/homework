@@ -337,14 +337,12 @@ Use Adam as an Optimizer in this model
 Cause adam has  qualities of Momentum and RMSprop that is based on adaptive estimation of first-order and second-order moments.  
 
 **Loss function : binary_crossentropy**  
-Binary_crossentropy is the most suitable Loss function for doing binary classification model  
+Binary_crossentropy is the most suitable Loss function for doing binary classification model    
   
   
   
 #### **As selecting the best number of epoch, we need help.**  
 Therefore we using earlystopping which stop at the best point and plus 20 epoch and ModelCheckpoint to find the maximum accuracy
-
-
 ```
 checkpoint_filepath = "bestmodel_epoch{epoch:02d}_valloss{val_loss:.2f}.hdf5"
 model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpoint_filepath,
