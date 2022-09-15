@@ -415,6 +415,16 @@ Round 3 | np.random.seed(1928)  tf.random.set_seed(3746) | 78 | 0.210 | 0.495 | 
 Round 4 | np.random.seed(4321)  tf.random.set_seed(8765) | 82 | 0.225 | 0.499 | 0.7991 
 Round 5 | np.random.seed(1324)  tf.random.set_seed(5769) | 131 | 0.158 | 0.422 | 0.8083 
 
+
+
+## Discussion :
+ 1. Assumptions, this project is a comparison of the model between Traditional ML Model and MLP Model. This project is a Churn model by Binary Classification. Therefore, we considers that using MLP Model will be a better model than ML Model, the accuracy score will be more and the running time should be more because the model is larger and more complex than ML Model. But after running these model, we found that accuracy score of the traditional ML better than MLP, while using more time than others except Decision Tree.  
+ 2. Imbalance Data: we use resampling helps to balance the data. After resampling and running the model, it will increase the accuracy of ML Model but slightly decrease in MLP Model.
+
+
+
+
+
 :bellhop_bell: | Time | Accuracy
 ------------ | ------------- | -------------
 MLP | 0.147±0.077 | 0.8003  
