@@ -14,6 +14,10 @@ df = pd.read_csv(path)
 df.head()
 ```
 <img width="900" alt="image" src="https://user-images.githubusercontent.com/97492504/190356749-70acd818-e305-4c69-85a5-67b1469d2da5.png">
+```
+df.describe()
+```
+<img width="920" alt="image" src="https://user-images.githubusercontent.com/97492504/190357180-78e37f5d-38b7-4807-b2d8-191c8540b980.png">
 
 ## EDA
 
