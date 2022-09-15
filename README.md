@@ -61,3 +61,29 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 ```
 df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
 ```
+
+```
+df['Gender'].replace(['Female'],0 , inplace=True)
+```
+
+```
+df['Gender'].replace(['Male'],1 , inplace=True)
+```
+
+```
+df['Gender'].unique()
+```
+
+```
+dummy=pd.get_dummies(df.Geography)
+df=pd.concat([df, dummy], axis=1)
+df.drop('Geography', axis=1, inplace=True)
+```
+
+```
+y = df['Exited']
+df.drop(columns=['Exited'], axis=1, inplace=True)
+```
+```
+df
+```
