@@ -165,7 +165,8 @@ def acc_score(X_test,Y_test,model):
 
 def class_report (X_test,Y_test,model):
   Y_predict = predict_y(X_test,model)
-  #print(classification_report(Y_test,Y_predict))
+  print(f'\nClassification Report\n')
+  print(classification_report(Y_test,Y_predict))
 
 def plot_crv(X_test,Y_test,model):
   Prob_Y_predict = model.predict_proba(X_test)[::,1]
@@ -219,4 +220,5 @@ class_report (X_test,Y_test,RF)
 plot_crv(X_test,Y_test,RF)
 plot_cfm(X_test,Y_test,RF)
 ```
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190376727-b6381533-56fa-4412-8cf4-ab3dec1f6642.png">     <img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190376822-9aefe40e-ea3c-440c-ad48-d2eea11bcd72.png">     <img width="273" alt="image" src="https://user-images.githubusercontent.com/97492504/190376957-1a3f7056-36de-499f-a793-04ce484208e2.png">
 
