@@ -79,7 +79,9 @@ sns.histplot(df['EstimatedSalary'],color="purple",fill=False)
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190358273-e9926fe6-ee28-4286-8162-7682a91fb166.png">
 
 ## Exploratory Data Analysis : EDA
-**Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.
+**Data preparation and Data pre-processing**: Data Cleaning, Normalization and Handling Imbalanced Data.  
+
+Select some columns and drop useless columns from the dataframe, then we change parameters in Gender column to dummy variables.
 ```
 df.drop(columns=['RowNumber', 'CustomerId','Surname'], axis=1, inplace=True)
 ```
@@ -91,12 +93,11 @@ df['Gender'].replace(['Female'],0 , inplace=True)
 ```
 df['Gender'].replace(['Male'],1 , inplace=True)
 ```  
-Select some columns and drop useless columns from the dataframe, then we change parameters in Gender column to dummy variables.
 
 ```
 df['Gender'].unique()
-```
-
+```  
+For Geography column, we replace with three dummy data type columns.
 ```
 dummy=pd.get_dummies(df.Geography)
 df=pd.concat([df, dummy], axis=1)
