@@ -348,3 +348,9 @@ plot_cfm(X_test,Y_test,mlp_model)
 ```
 
 <img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190389992-bdc5addd-6bbf-4049-a7aa-51fade2c5667.png">      <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190390049-91f2d21d-330a-44b5-acb3-79de2e667654.png">
+
+`iteration 2`
+```
+np.random.seed(1234)
+tf.random.set_seed(5678)
+```
