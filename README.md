@@ -249,7 +249,7 @@ plot_cfm(X_test,Y_test,xgb_model)
 
 ## Multilayer perceptron : MLP
 
-**set seed**  
+**set seed**
 ```
 np.random.seed(1150)
 tf.random.set_seed(1112)
@@ -258,14 +258,17 @@ tf.random.set_seed(1112)
 ```
 X_train.shape
 ```
+
 ```
 Y_train.shape
 ```
+
 ```
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation
 ```
+
 ```
 mlp_model = tf.keras.models.Sequential()
 
@@ -273,14 +276,11 @@ mlp_model = tf.keras.models.Sequential()
 mlp_model.add( tf.keras.Input(shape=(12,)) )
 
 # Hidden layer
-mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden1') )  
-mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn1') )  
-mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden2') )   
-mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn2') )
-mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden3') )   
-mlp_model.add( tf.keras.layers.BatchNormalization(axis=-1, name='bn3') )
-mlp_model.add( tf.keras.layers.Dense(20, activation='relu', name='hidden4') )   
-mlp_model.add( tf.keras.layers.Dropout(0.3) )                     
+mlp_model.add( tf.keras.layers.Dense(32, activation='relu', name='hidden1') )  
+mlp_model.add( tf.keras.layers.Dense(16, activation='relu', name='hidden2') )   
+mlp_model.add( tf.keras.layers.Dense(8, activation='relu', name='hidden3') )   
+mlp_model.add( tf.keras.layers.Dense(4, activation='relu', name='hidden4') )   
+mlp_model.add( tf.keras.layers.Dense(2, activation='relu', name='hidden5') )   
 
 # Output layer
 mlp_model.add(Dense(1, activation = 'sigmoid'))
@@ -288,12 +288,14 @@ mlp_model.add(Dense(1, activation = 'sigmoid'))
 
 mlp_model.summary()
 ```
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190415003-76468d59-30dc-4fbb-ac0d-0cc97a77433a.png">
 
 ```
 mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc'])
 #model.compile( optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['acc'] )
 ```
+
 ```
 checkpoint_filepath = "bestmodel_epoch{epoch:02d}_valloss{val_loss:.2f}.hdf5"
 model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpoint_filepath,
@@ -301,11 +303,16 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpo
                                                                                               monitor='val_acc',
                                                                                               mode='max',
                                                                                               save_best_only=True)
+
+from keras import callbacks
+earlystopping = callbacks.EarlyStopping(monitor ="val_loss", 
+                                        mode ="min", patience = 20, 
+                                        restore_best_weights = True)
 ```
+
 ```
-history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=250, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback] )
+history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=300, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback,earlystopping] )
 ```
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190398798-8eb6befb-9182-40b3-8315-61900bdeb390.png">
 
 ```
 # Summarize history for accuracy
@@ -331,18 +338,17 @@ plt.grid()
 plt.show()
 ```
 
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190389375-ccad43c1-e5a6-44d3-9823-2834f4c88241.png">
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
 
 ```
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
 print( f"{mlp_model.metrics_names} = {results}" )
 ```
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190389812-09932581-f744-4855-96f3-65bfcf52a5d8.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190416791-f3603832-49ca-4608-ac60-8fa8b49cb968.png">
 
 ```
 acc_score(X_test,Y_test,mlp_model)
 class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
-
-<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190389992-bdc5addd-6bbf-4049-a7aa-51fade2c5667.png">      <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190390049-91f2d21d-330a-44b5-acb3-79de2e667654.png">
+<img width="280" alt="image" src="https://user-images.githubusercontent.com/97492504/190417038-d8c50a37-a1fd-4708-9bf5-4015bfd4ab2c.png"><img width="250" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
