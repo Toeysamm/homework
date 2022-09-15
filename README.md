@@ -354,3 +354,7 @@ plot_cfm(X_test,Y_test,mlp_model)
 np.random.seed(1234)
 tf.random.set_seed(5678)
 ```
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190392279-8009fddb-b544-470f-be3b-fe0196b8bdc6.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/97492504/190392401-8cf15b86-00f7-4ddf-98d6-6eb8e576302e.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190392558-64ec1518-05c8-43a0-b8ca-7786deecc1ec.png">
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190392830-912fce20-5b1d-4d05-a1f1-1ae5f90b1d9f.png">      <img width="300" alt="image" src="https://user-images.githubusercontent.com/97492504/190392917-2d8c9509-bf66-4751-93e7-365d313e128c.png">
