@@ -411,5 +411,5 @@ Experiment with different initial random weights for 5 rounds
 
 MLP | Initial random weight | Epoch | Time (mean) | Time (SD) | Time (SD) | Accuracy
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | -------------
-แถวแรก คอลั่มแรก | แถวแรก คอลั่มที่ 2 | แถวแรก คอลั่มที่ 2
+Round 1 | np.random.seed(1150)  tf.random.set_seed(1112) | แถวแรก คอลั่มที่ 2
 แถวที่ 2 คอลั่มแรก | แถวที่ 2 คอลั่มที่ 2 | แถวแรก คอลั่มที่ 2
