@@ -396,7 +396,7 @@ After we ran the MLP model several times with difference hyperparameters, finall
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
 print( f"{mlp_model.metrics_names} = {results}" )
 ```
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/97492504/190416791-f3603832-49ca-4608-ac60-8fa8b49cb968.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97492504/190461513-50842255-c28d-49d6-868c-f80029179428.png">
 
 ```
 acc_score(X_test,Y_test,mlp_model)
