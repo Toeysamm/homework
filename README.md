@@ -448,3 +448,7 @@ Brownlee, J. (2020).   Random Oversampling and Undersampling for Imbalanced Clas
 Rahul, A. (2019). The 5 Sampling Algorithms every Data Scientist need to know. Retrieved from https://towardsdatascience.com/the-5-sampling-algorithms-every-data-scientist-need-to-know-43c7bc11d17c  
 Ekarat, R. (2020). DADS6003 In-class competition Applied ML competition. Retrieved from https://www.kaggle.com/competitions/dads6003-in-class-competition/rules  
 Shruti, I. (2019). Churn Modelling classification data set. Retrieved from https://www.kaggle.com/datasets/shrutimechlearn/churn-modelling  
+
+
+## End Credit:  
+This work is part of the DADS7202 Deep Learning in Master degree of Science at Faculty of Applied Statistics National Institute of Development Administration.
