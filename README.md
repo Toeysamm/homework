@@ -155,10 +155,10 @@ def predict_y(X_test,model):
   else:
     Y_predict=model.predict(X_test)
   return Y_predict
- ```
+```
  
- ```
- def acc_score(X_test,Y_test,model):
+```
+def acc_score(X_test,Y_test,model):
   Y_predict = predict_y(X_test,model)
   acc = accuracy_score(Y_test, Y_predict)
   print(f"Accuracy = {acc*100:.2f}%")
@@ -208,4 +208,16 @@ def plot_cfm(X_test,Y_test,model):
   ax.xaxis.set_ticklabels(['Retrained','Closed'])
   ax.yaxis.set_ticklabels(['Retrained','Closed'])
   plt.show()
- ```
+```
+
+**Decision Tree**
+```
+from sklearn.tree import DecisionTreeClassifier
+DT = DecisionTreeClassifier()
+DT.fit(X_train, Y_train)
+acc_score(X_test,Y_test,DT)
+class_report (X_test,Y_test,DT)
+plot_crv(X_test,Y_test,DT)
+plot_cfm(X_test,Y_test,DT)
+```
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/97492504/190364557-1e265c74-81f5-4892-8988-cc801a8d481d.png">
