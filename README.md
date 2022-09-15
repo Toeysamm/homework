@@ -250,7 +250,7 @@ plot_cfm(X_test,Y_test,xgb_model)
 ## Multilayer perceptron : MLP
 
 **set seed**  
-iteration 1
+`iteration 1`
 ```
 np.random.seed(1150)
 tf.random.set_seed(1112)
@@ -288,7 +288,7 @@ mlp_model.add(Dense(1, activation = 'sigmoid'))
 
 mlp_model.summary()
 ```
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/97492504/190387698-f417a166-e441-46f5-beef-4df3ff545715.png">
 
 ```
 mlp_model.compile(optimizer='adam', loss = 'binary_crossentropy',metrics=['acc'])
@@ -305,4 +305,4 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint( filepath=checkpo
 ```
 history = mlp_model.fit ( X_train, Y_train, batch_size=128, epochs=25, verbose=1, validation_split=0.2, callbacks=[model_checkpoint_callback] )
 ```
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190388476-c094e005-4431-4c83-8fe1-7176de10da1b.png">
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190388476-c094e005-4431-4c83-8fe1-7176de10da1b.png">
