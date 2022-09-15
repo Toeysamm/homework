@@ -338,17 +338,17 @@ plt.grid()
 plt.show()
 ```
 
-<img width="700" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190416192-42549e48-178f-4c65-a783-81e77163f6ce.png">
 
 ```
 results = mlp_model.evaluate(X_test, Y_test, batch_size=128)
 print( f"{mlp_model.metrics_names} = {results}" )
 ```
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/97492504/190416791-f3603832-49ca-4608-ac60-8fa8b49cb968.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/97492504/190416791-f3603832-49ca-4608-ac60-8fa8b49cb968.png">
 
 ```
 acc_score(X_test,Y_test,mlp_model)
 class_report (X_test,Y_test,mlp_model)
 plot_cfm(X_test,Y_test,mlp_model)
 ```
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/97492504/190417038-d8c50a37-a1fd-4708-9bf5-4015bfd4ab2c.png"><img width="250" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/97492504/190417038-d8c50a37-a1fd-4708-9bf5-4015bfd4ab2c.png"><img width="312" alt="image" src="https://user-images.githubusercontent.com/97492504/190417093-e1b4abc8-3615-4f56-9cb4-243de3455069.png">
